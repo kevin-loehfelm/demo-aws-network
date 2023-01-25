@@ -23,7 +23,17 @@ output "web_security_group" {
   value       = aws_security_group.web.id
 }
 
-output "network_subnets" {
-  description = "AWS VPC Subnets"
+output "public_subnets" {
+  description = "AWS Public Subnets"
   value       = module.vpc.public_subnets
+}
+
+output "app_subnets" {
+  description = "AWS Application Subnets"
+  value       = module.vpc.private_subnets
+}
+
+output "database_subnets" {
+  description = "AWS Database Subnets"
+  value       = module.vpc.database_subnets
 }
