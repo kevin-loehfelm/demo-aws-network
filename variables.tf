@@ -6,7 +6,7 @@ variable "aws_region" {
 variable "vpc_name" {
   description = "Name of the VPC"
   type        = string
-  default     = "aws-vpc"
+  default     = "aws-web-demo"
 }
 
 variable "vpc_prefix" {
