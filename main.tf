@@ -22,7 +22,7 @@ module "vpc" {
   enable_vpn_gateway = false
 
   tags = {
-    # "env:provisioner"  = "Terraform",
+    "env:provisioner"  = "Terraform",
     "env:platform"     = "aws"
     "tfc:organization" = "kloehfelm-demo"
     "tfc:workspace"    = "tf-aws-network"
