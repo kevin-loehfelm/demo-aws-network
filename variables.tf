@@ -15,6 +15,12 @@ variable "vpc_prefix" {
   default     = "10.10.0.0/20"
 }
 
+variable "enable_nat" {
+  type        = bool
+  description = "Enable NAT Gateway"
+  default     = true
+}
+
 variable "vpc_database_subnets" {
   description = "VPC Database Subnets"
   type = list(object({

@@ -40,6 +40,14 @@ Type: `string`
 
 Default: `"us-east-1"`
 
+### <a name="input_enable_nat"></a> [enable\_nat](#input\_enable\_nat)
+
+Description: Enable NAT Gateway
+
+Type: `bool`
+
+Default: `true`
+
 ### <a name="input_vpc_app_subnets"></a> [vpc\_app\_subnets](#input\_vpc\_app\_subnets)
 
 Description: VPC Application Subnets

@@ -17,7 +17,7 @@ module "vpc" {
   private_subnets  = [for s in var.vpc_app_subnets : s.prefix]
   public_subnets   = [for s in var.vpc_public_subnets : s.prefix]
 
-  enable_nat_gateway = true
+  enable_nat_gateway = var.enable_nat
   single_nat_gateway = true
   enable_vpn_gateway = false
 
