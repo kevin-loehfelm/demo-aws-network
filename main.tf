@@ -1,9 +1,9 @@
 locals {
-    azs = distinct(concat(
-        [for s in var.vpc_database_subnets : s.az],
-        [for s in var.vpc_app_subnets : s.az],
-        [for s in var.vpc_public_subnets : s.az]
-    ))
+  azs = distinct(concat(
+    [for s in var.vpc_database_subnets : s.az],
+    [for s in var.vpc_app_subnets : s.az],
+    [for s in var.vpc_public_subnets : s.az]
+  ))
 }
 
 module "vpc" {
@@ -12,12 +12,12 @@ module "vpc" {
   name = var.vpc_name
   cidr = var.vpc_prefix
 
-  azs             = local.azs
+  azs              = local.azs
   database_subnets = [for s in var.vpc_database_subnets : s.prefix]
-  private_subnets = [for s in var.vpc_app_subnets : s.prefix]
-  public_subnets  = [for s in var.vpc_public_subnets : s.prefix]
+  private_subnets  = [for s in var.vpc_app_subnets : s.prefix]
+  public_subnets   = [for s in var.vpc_public_subnets : s.prefix]
 
-  # enable_nat_gateway = true
+  enable_nat_gateway = true
   single_nat_gateway = true
   enable_vpn_gateway = false
 

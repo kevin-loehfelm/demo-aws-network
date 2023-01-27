@@ -1,5 +1,3 @@
-# tf-aws-network
-
 ## Requirements
 
 No requirements.
