@@ -1,6 +1,6 @@
 module "prod1" {
   source  = "app.terraform.io/kloehfelm-demo/network-aws/aws"
-  version = "0.0.4"
+  version = "0.0.7"
 
   label                   = "use1-prod"
   aws_region              = "us-east-1"
